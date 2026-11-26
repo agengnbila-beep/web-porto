@@ -2,14 +2,14 @@
 
 import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { portfolioData } from "@/data/portfolio";
+import { usePortfolio } from "@/context/PortfolioContext";
 import { Project } from "@/types/portfolio";
 import { ProjectModal } from "./ProjectModal";
 import { ExternalLink, Github, Eye, Sparkles } from "lucide-react";
 
 export const Projects: React.FC = () => {
   const { language, t } = useLanguage();
-  const { projects } = portfolioData;
+  const { projects } = usePortfolio();
 
   const [activeFilter, setActiveFilter] = useState<string>("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);

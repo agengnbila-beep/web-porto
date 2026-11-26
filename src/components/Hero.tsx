@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { portfolioData } from "@/data/portfolio";
+import { usePortfolio } from "@/context/PortfolioContext";
 import {
   ArrowRight,
   Download,
@@ -16,7 +16,7 @@ import {
 
 export const Hero: React.FC = () => {
   const { language, t } = useLanguage();
-  const { personal } = portfolioData;
+  const { personal } = usePortfolio();
 
   const titles = personal.titles[language];
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);

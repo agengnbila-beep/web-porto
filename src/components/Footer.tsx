@@ -2,12 +2,12 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { portfolioData } from "@/data/portfolio";
-import { ArrowUp, Github, Linkedin, Instagram, Heart, Terminal } from "lucide-react";
+import { usePortfolio } from "@/context/PortfolioContext";
+import { ArrowUp, Github, Linkedin, Instagram, Heart, Terminal, Lock } from "lucide-react";
 
 export const Footer: React.FC = () => {
   const { t } = useLanguage();
-  const { personal } = portfolioData;
+  const { personal } = usePortfolio();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -69,6 +69,15 @@ export const Footer: React.FC = () => {
                 <Instagram className="w-4 h-4" />
               </a>
             )}
+
+            <a
+              href="/admin"
+              className="p-2 rounded-lg text-slate-500 hover:text-cyan-500 dark:text-slate-400 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors"
+              title="Admin CMS"
+              aria-label="Admin CMS"
+            >
+              <Lock className="w-4 h-4" />
+            </a>
 
             <button
               onClick={scrollToTop}

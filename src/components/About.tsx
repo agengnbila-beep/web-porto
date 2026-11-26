@@ -2,12 +2,12 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { portfolioData } from "@/data/portfolio";
+import { usePortfolio } from "@/context/PortfolioContext";
 import { Zap, Code, ShieldCheck, Coffee } from "lucide-react";
 
 export const About: React.FC = () => {
   const { language, t } = useLanguage();
-  const { personal } = portfolioData;
+  const { personal } = usePortfolio();
 
   const highlights = [
     {

@@ -2,12 +2,12 @@
 
 import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { portfolioData } from "@/data/portfolio";
+import { usePortfolio } from "@/context/PortfolioContext";
 import { Layers, Database, Cpu, CheckCircle2 } from "lucide-react";
 
 export const Skills: React.FC = () => {
   const { language, t } = useLanguage();
-  const { skills } = portfolioData;
+  const { skills } = usePortfolio();
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
 
   const categoryIcons = [

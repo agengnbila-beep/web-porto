@@ -3,12 +3,13 @@
 import React, { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useTheme } from "@/context/ThemeContext";
-import { portfolioData } from "@/data/portfolio";
+import { usePortfolio } from "@/context/PortfolioContext";
 import { Sun, Moon, Menu, X, Globe, Terminal } from "lucide-react";
 
 export const Navbar: React.FC = () => {
   const { language, toggleLanguage, t } = useLanguage();
   const { theme, toggleTheme } = useTheme();
+  const { personal } = usePortfolio();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -46,7 +47,7 @@ export const Navbar: React.FC = () => {
             <Terminal className="w-4 h-4" />
           </div>
           <span>
-            {portfolioData.personal.nickname}
+            {personal.nickname}
             <span className="text-cyan-500">.dev</span>
           </span>
         </a>

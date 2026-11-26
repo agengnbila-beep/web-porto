@@ -1,0 +1,315 @@
+{
+  "personal": {
+    "name": "Ageng Prasetyo",
+    "nickname": "Ageng",
+    "role": {
+      "id": "Full Stack Web Developer & Software Engineer",
+      "en": "Full Stack Web Developer & Software Engineer"
+    },
+    "titles": {
+      "id": [
+        "Full Stack Web Developer",
+        "React & Next.js Specialist",
+        "Backend & API Architect",
+        "Open Source Enthusiast"
+      ],
+      "en": [
+        "Full Stack Web Developer",
+        "React & Next.js Specialist",
+        "Backend & API Architect",
+        "Open Source Enthusiast"
+      ]
+    },
+    "bio": {
+      "id": "Membangun aplikasi web modern, cepat, dan terukur dengan pengalaman pengguna yang intuitif serta arsitektur kode yang bersih.",
+      "en": "Crafting modern, fast, and scalable web applications with intuitive user experiences and clean code architecture."
+    },
+    "about": {
+      "id": [
+        "Halo! Saya Ageng, seorang pengembang perangkat lunak yang berfokus pada pengembangan aplikasi web end-to-end. Saya senang mengubah ide dan masalah nyata menjadi produk digital bernilai tinggi.",
+        "Dengan pengalaman bekerja dengan ekosistem JavaScript/TypeScript modern (Next.js, React, Node.js) dan arsitektur database relasional maupun NoSQL, saya selalu mengutamakan performa, aksesibilitas, dan maintainability kode.",
+        "Ketika tidak sedang ngoding, saya senang mempelajari tren teknologi baru, berkontribusi ke proyek open source, atau berbagi pengetahuan teknologi."
+      ],
+      "en": [
+        "Hello! I'm Ageng, a passionate Software Engineer focused on end-to-end web application development. I love transforming real-world problems and creative ideas into high-impact digital products.",
+        "With strong proficiency in the modern JavaScript/TypeScript ecosystem (Next.js, React, Node.js) along with relational and NoSQL database architecture, I prioritize performance, accessibility, and code maintainability.",
+        "When I'm not coding, you can find me exploring emerging tech trends, contributing to open-source initiatives, or sharing knowledge with the community."
+      ]
+    },
+    "stats": {
+      "yearsExp": 3,
+      "projectsDone": 18,
+      "satisfiedClients": 12,
+      "coffeeCups": "500+"
+    },
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800",
+    "resumeUrl": "#",
+    "location": "Indonesia",
+    "email": "ageng.dev@example.com",
+    "whatsapp": "+62 812-3456-7890",
+    "whatsappUrl": "https://wa.me/6281234567890",
+    "github": "https://github.com/ageng-dev",
+    "linkedin": "https://linkedin.com/in/ageng-dev",
+    "instagram": "https://instagram.com/ageng.dev"
+  },
+  "skills": [
+    {
+      "title": {
+        "id": "Frontend Development",
+        "en": "Frontend Development"
+      },
+      "skills": [
+        { "name": "React.js", "level": "Advanced" },
+        { "name": "Next.js (App Router)", "level": "Advanced" },
+        { "name": "TypeScript", "level": "Advanced" },
+        { "name": "Tailwind CSS", "level": "Expert" },
+        { "name": "HTML5 / CSS3", "level": "Expert" },
+        { "name": "Redux Toolkit / Zustand", "level": "Intermediate" },
+        { "name": "Framer Motion", "level": "Intermediate" }
+      ]
+    },
+    {
+      "title": {
+        "id": "Backend & Database",
+        "en": "Backend & Database"
+      },
+      "skills": [
+        { "name": "Node.js & Express", "level": "Advanced" },
+        { "name": "PostgreSQL & Prisma ORM", "level": "Advanced" },
+        { "name": "RESTful APIs & GraphQL", "level": "Advanced" },
+        { "name": "MongoDB", "level": "Intermediate" },
+        { "name": "Redis", "level": "Intermediate" },
+        { "name": "Supabase / Firebase", "level": "Advanced" }
+      ]
+    },
+    {
+      "title": {
+        "id": "Tools & DevOps",
+        "en": "Tools & DevOps"
+      },
+      "skills": [
+        { "name": "Git & GitHub", "level": "Advanced" },
+        { "name": "Docker", "level": "Intermediate" },
+        { "name": "Vercel / Netlify", "level": "Advanced" },
+        { "name": "Linux / Bash", "level": "Intermediate" },
+        { "name": "Postman", "level": "Advanced" },
+        { "name": "Figma (UI/UX Handoff)", "level": "Intermediate" }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "saas-analytics-platform",
+      "title": "ApexPulse - SaaS Analytics Dashboard",
+      "category": "fullstack",
+      "date": "2024",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      "summary": {
+        "id": "Platform analitik web real-time berkecepatan tinggi dengan integrasi grafik interaktif dan multi-tenant authentication.",
+        "en": "High-performance real-time web analytics platform with interactive charts and multi-tenant authentication."
+      },
+      "description": {
+        "id": "ApexPulse adalah platform SaaS untuk memantau performa web dan metrik pengguna secara real-time. Dibangun menggunakan Next.js App Router dengan caching berkinerja tinggi, database PostgreSQL melalui Prisma, serta visualisasi data interaktif menggunakan Chart.js.",
+        "en": "ApexPulse is a SaaS platform designed for monitoring web performance and user metrics in real-time. Built with Next.js App Router featuring high-efficiency caching, PostgreSQL via Prisma, and rich data visualisations using Chart.js."
+      },
+      "features": {
+        "id": [
+          "Autentikasi aman berbasis JWT & OAuth (Google & GitHub)",
+          "Dashboard interaktif dengan filter rentang waktu dan ekspor CSV/PDF",
+          "Websocket real-time tracking untuk visitor aktif",
+          "Sistem manajemen tim dan role-based access control (RBAC)"
+        ],
+        "en": [
+          "Secure JWT & OAuth-based authentication (Google & GitHub)",
+          "Interactive dashboard with custom date filters and CSV/PDF export",
+          "Real-time WebSocket event tracking for active visitors",
+          "Team management system with role-based access control (RBAC)"
+        ]
+      },
+      "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL", "NextAuth.js"],
+      "liveUrl": "https://example.com/demo/apexpulse",
+      "githubUrl": "https://github.com/ageng-dev/apexpulse-analytics"
+    },
+    {
+      "id": "ecommerce-storefront",
+      "title": "KarsaStore - Headless E-Commerce Platform",
+      "category": "fullstack",
+      "date": "2024",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=1200",
+      "summary": {
+        "id": "Toko daring headless modern dengan integrasi pembayaran Midtrans, keranjang dinamis, dan kalkulasi ongkir otomatis.",
+        "en": "Modern headless e-commerce store with Midtrans payment gateway, dynamic cart, and automated shipping calculation."
+      },
+      "description": {
+        "id": "Solusi e-commerce headless yang dirancang untuk kecepatan loading instan dan konversi tinggi. Dilengkapi katalog produk responsif, integrasi payment gateway otomatis, serta panel admin untuk manajemen stok dan pesanan.",
+        "en": "A headless e-commerce solution engineered for instant page loads and high conversion rates. Features a responsive product catalog, automated payment gateway, and an admin portal for inventory management."
+      },
+      "features": {
+        "id": [
+          "Integrasi pembayaran online Midtrans (QRIS, VA Bank, E-Wallet)",
+          "Kalkulasi ongkos kirim otomatis API RajaOngkir",
+          "State management keranjang belanja dengan Zustand & LocalStorage sync",
+          "Optimasi SEO dengan dynamic meta tags dan OpenGraph image generator"
+        ],
+        "en": [
+          "Integrated Midtrans payment gateway (QRIS, Virtual Accounts, E-Wallet)",
+          "Automated shipping fee calculation via RajaOngkir API",
+          "Shopping cart state management using Zustand with LocalStorage sync",
+          "High SEO score with dynamic metadata and automatic OpenGraph images"
+        ]
+      },
+      "techStack": ["React", "Next.js", "Tailwind CSS", "Zustand", "Node.js", "Midtrans API"],
+      "liveUrl": "https://example.com/demo/karsastore",
+      "githubUrl": "https://github.com/ageng-dev/karsastore-ecommerce"
+    },
+    {
+      "id": "dev-collab-docs",
+      "title": "DocuVerse - Collaborative Technical Documentation",
+      "category": "frontend",
+      "date": "2023",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1200",
+      "summary": {
+        "id": "Platform dokumentasi pengembang berbasis MDX dengan pencarian teks instan (instant search) dan syntax highlighting.",
+        "en": "MDX-powered technical developer documentation platform with lightning-fast full-text search and syntax highlighting."
+      },
+      "description": {
+        "id": "Sistem dokumentasi teknis modern untuk tim pengembang. Mendukung rendering Markdown/MDX dinamis, copy-to-clipboard code snippets, table of contents otomatis, serta fitur pencarian instan.",
+        "en": "A modern developer documentation site built for engineering teams. Supports dynamic MDX rendering, interactive code snippets, automatic table of contents, and instant keyboard-driven search."
+      },
+      "features": {
+        "id": [
+          "Pencarian cepat Command Menu (Cmd + K) di seluruh artikel",
+          "Code block dengan syntax highlighter dan fitur salin satu klik",
+          "Dukungan Dark/Light theme otomatis dan penyesuaian kontras",
+          "Responsive Table of Contents aktif mengikuti posisi scrolling"
+        ],
+        "en": [
+          "Instant Command Menu search (Cmd + K) across all docs",
+          "Code blocks featuring syntax highlighting and one-click copy",
+          "Seamless Dark/Light theme switching with high contrast ratio",
+          "Scroll-spy interactive Table of Contents for quick navigation"
+        ]
+      },
+      "techStack": ["Next.js", "MDX", "Tailwind CSS", "TypeScript", "Algolia / Flexsearch"],
+      "liveUrl": "https://example.com/demo/docuverse",
+      "githubUrl": "https://github.com/ageng-dev/docuverse"
+    },
+    {
+      "id": "task-flow-management",
+      "title": "FlowTask - Kanban Project Management Tool",
+      "category": "fullstack",
+      "date": "2023",
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200",
+      "summary": {
+        "id": "Aplikasi manajemen proyek kanban interaktif dengan drag-and-drop halus dan kolaborasi tim.",
+        "en": "Interactive Kanban project management app featuring smooth drag-and-drop and team collaboration."
+      },
+      "description": {
+        "id": "FlowTask membantu tim mendistribusikan dan melacak progres tugas secara visual. Dibangun dengan interaksi drag-and-drop yang intuitif menggunakan @hello-pangea/dnd.",
+        "en": "FlowTask empowers teams to track and distribute tasks visually. Built with fluid drag-and-drop interactions using @hello-pangea/dnd."
+      },
+      "features": {
+        "id": [
+          "Papan Kanban interaktif dengan drag and drop kartu tugas",
+          "Label prioritas, deadline tanggal, dan penugasan anggota tim",
+          "Mode filter tugas cepat berdasarkan status dan assignee"
+        ],
+        "en": [
+          "Interactive Kanban board with card drag-and-drop capabilities",
+          "Priority tags, due date reminders, and member assignment",
+          "Instant task filtering based on progress state and assignee"
+        ]
+      },
+      "techStack": ["React", "TypeScript", "Tailwind CSS", "Express.js", "MongoDB"],
+      "liveUrl": "https://example.com/demo/flowtask",
+      "githubUrl": "https://github.com/ageng-dev/flowtask"
+    }
+  ],
+  "experiences": [
+    {
+      "id": "senior-web-dev",
+      "role": {
+        "id": "Full Stack Web Developer",
+        "en": "Full Stack Web Developer"
+      },
+      "company": "Inovasi Digital Nusantara",
+      "location": "Jakarta, Indonesia (Hybrid)",
+      "period": {
+        "id": "2023 - Sekarang",
+        "en": "2023 - Present"
+      },
+      "description": {
+        "id": [
+          "Memimpin pengembangan antarmuka web modern menggunakan Next.js dan Tailwind CSS, meningkatkan Core Web Vitals sebesar 35%.",
+          "Merancang RESTful API dan integrasi microservices yang menangani lebih dari 50.000 request harian.",
+          "Berkolaborasi dengan tim UI/UX dan Product Manager untuk merilis fitur baru dalam siklus sprint 2 mingguan."
+        ],
+        "en": [
+          "Led development of modern web applications using Next.js & Tailwind CSS, improving Core Web Vitals by 35%.",
+          "Designed resilient RESTful APIs and microservice integrations serving over 50,000+ daily requests.",
+          "Collaborated closely with product designers and managers in agile bi-weekly sprint cycles."
+        ]
+      },
+      "technologies": ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Docker", "Tailwind CSS"],
+      "type": "work"
+    },
+    {
+      "id": "frontend-dev",
+      "role": {
+        "id": "Frontend Developer",
+        "en": "Frontend Developer"
+      },
+      "company": "TechNova Studio",
+      "location": "Bandung, Indonesia",
+      "period": {
+        "id": "2021 - 2023",
+        "en": "2021 - 2023"
+      },
+      "description": {
+        "id": [
+          "Mengembangkan 10+ website klien dengan arsitektur SPA React responsif dan integrasi CMS.",
+          "Mengoptimasi aset gambar dan bundling JavaScript, mengurangi waktu load halaman awal dari 4.2 detik menjadi 1.5 detik.",
+          "Menerapkan unit testing dan automated CI/CD pipeline pada repositori GitHub."
+        ],
+        "en": [
+          "Delivered 10+ client websites with responsive React SPAs and headless CMS backends.",
+          "Optimized image assets and JavaScript bundles, slashing initial load time from 4.2s to 1.5s.",
+          "Implemented unit testing and automated GitHub Actions CI/CD workflows."
+        ]
+      },
+      "technologies": ["React", "JavaScript", "Tailwind CSS", "Redux", "REST APIs"],
+      "type": "work"
+    },
+    {
+      "id": "edu-cs",
+      "role": {
+        "id": "Sarjana Ilmu Komputer / Teknik Informatika",
+        "en": "B.S. in Computer Science / Informatics"
+      },
+      "company": "Universitas Negeri",
+      "location": "Indonesia",
+      "period": {
+        "id": "2017 - 2021",
+        "en": "2017 - 2021"
+      },
+      "description": {
+        "id": [
+          "Lulus dengan predikat Sangat Memuaskan (GPA: 3.75/4.00).",
+          "Fokus riset tugas akhir pada Optimasi Kinerja Aplikasi Web dan Algoritma Rekomendasi Data.",
+          "Aktif di Komunitas Pemrograman Mahasiswa dan asisten laboratorium algoritma."
+        ],
+        "en": [
+          "Graduated with Distinction (GPA: 3.75/4.00).",
+          "Final capstone project focused on Web Application Performance Optimization and Data Recommendation Algorithms.",
+          "Active leader in Computer Science Student Coding Club and laboratory teaching assistant."
+        ]
+      },
+      "technologies": ["Algorithms", "Data Structures", "Database Systems", "Software Engineering"],
+      "type": "education"
+    }
+  ]
+}

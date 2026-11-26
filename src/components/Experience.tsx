@@ -2,12 +2,12 @@
 
 import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { portfolioData } from "@/data/portfolio";
+import { usePortfolio } from "@/context/PortfolioContext";
 import { Briefcase, GraduationCap, MapPin, Calendar } from "lucide-react";
 
 export const Experience: React.FC = () => {
   const { language, t } = useLanguage();
-  const { experiences } = portfolioData;
+  const { experiences } = usePortfolio();
 
   const [activeTab, setActiveTab] = useState<"all" | "work" | "education">("all");
 

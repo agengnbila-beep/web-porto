@@ -1,19 +1,38 @@
-# Website Portofolio Ageng (.dev) 🚀
+# Website Portofolio Ageng (.dev) + Admin CMS Panel 🚀
 
-Website portofolio modern, interaktif, responsif, dan berkinerja tinggi yang dibangun menggunakan **Next.js (App Router)**, **React**, **Tailwind CSS**, dan **Lucide Icons**.
+Website portofolio modern, interaktif, responsif, dan berkinerja tinggi yang dilengkapi dengan **Website Admin CMS terintegrasi** di `/admin` untuk mengubah data diri, proyek, keahlian, dan riwayat pekerjaan secara langsung dari web browser tanpa menyentuh kode.
+
+Dibangun menggunakan **Next.js (App Router)**, **React**, **Tailwind CSS**, dan **Lucide Icons**.
 
 ---
 
-## ✨ Fitur Utama
+## 🔐 Website Admin Dashboard (`/admin`)
 
-- 🌐 **Bilingual (ID ⇄ EN)**: Dilengkapi tombol peralihan bahasa instan (Bahasa Indonesia & Bahasa Inggris) untuk jangkauan global maupun lokal.
-- 🌓 **Dark & Light Mode**: Desain tema *Modern Dark Slate* dengan aksen neon (Cyan/Indigo) serta mode terang (*Clean Light*) yang nyaman untuk mata.
+Untuk mengelola dan mengedit portofolio Anda secara visual:
+1. Buka URL: **`http://localhost:3000/admin`**
+2. Masukkan password admin default: **`admin123`**
+3. Fitur di dalam Dashboard Admin:
+   - 👤 **Profil & Bio**: Ubah nama lengkap, nama panggilan, bio (Bahasa Indonesia & English), kontak email, WhatsApp, lokasi, link GitHub, LinkedIn, URL foto profil, dan statistik.
+   - 🚀 **Manajemen Proyek (CRUD)**: Tambah proyek baru, edit proyek yang ada, upload link gambar mockup, atur tag teknologi, link demo & repository, serta status *Featured Project*.
+   - ⚡ **Keahlian (Skills & Tech Stack)**: Tambah/hapus skill per kategori (Frontend, Backend, DevOps) beserta level keahlian.
+   - 🎓 **Pengalaman & Pendidikan**: Kelola riwayat karir dan pendidikan.
+   - 💾 **Backup JSON**: Unduh file cadangan (*snapshot*) seluruh konfigurasi data portofolio kapan saja dalam satu klik.
+4. Klik tombol **"Simpan Semua"** di pojok kanan atas, dan perubahan akan langsung tampil secara instan di halaman utama website!
+
+> 💡 **Cara Mengubah Password Admin**:  
+> Cukup ubah nilai `ADMIN_PASSWORD` di file `.env.local` pada komputer Anda (atau di menu *Environment Variables* Vercel jika sudah di-hosting).
+
+---
+
+## ✨ Fitur Halaman Portofolio Publik
+
+- 🌐 **Bilingual (ID ⇄ EN)**: Dilengkapi tombol peralihan bahasa instan (Bahasa Indonesia & Bahasa Inggris).
+- 🌓 **Dark & Light Mode**: Desain tema *Modern Dark Slate* dengan aksen neon (Cyan/Indigo) serta mode terang (*Clean Light*).
 - ⚡ **Single-Page Navigation**: Navigasi mulus (*smooth scrolling*) ke setiap bagian halaman dengan status navbar *blur backdrop*.
 - 🔍 **Project Detail Modal**: Setiap proyek dapat dibuka dalam popup detail untuk menampilkan studi kasus, arsitektur, daftar fitur unggulan, dan link demo/GitHub.
 - 💼 **Timeline Karir & Pendidikan**: Filter interaktif antara pengalaman kerja profesional dan riwayat pendidikan.
 - 🛠️ **Tech Stack Badges**: Showcase keahlian berdasarkan kategori (*Frontend*, *Backend & Database*, serta *Tools & DevOps*).
 - ✉️ **Formulir Kontak Interaktif**: Dilengkapi validasi formulir, notifikasi feedback toast, tombol salin email, dan tautan langsung ke WhatsApp.
-- 🎯 **Konfigurasi Terpusat**: Semua data teks, foto, link medsos, dan proyek tersimpan di satu file: [`src/data/portfolio.ts`](file:///d:/ageng/web%20porto%20ageng/src/data/portfolio.ts).
 
 ---
 
@@ -24,32 +43,15 @@ Website portofolio modern, interaktif, responsif, dan berkinerja tinggi yang dib
    npm run dev
    ```
 2. **Buka di peramban**:
-   Kunjungi [http://localhost:3000](http://localhost:3000)
+   - Halaman Utama: [http://localhost:3000](http://localhost:3000)
+   - Panel Admin: [http://localhost:3000/admin](http://localhost:3000/admin)
 
 ---
 
-## 📝 Cara Menyesuaikan Data Diri Anda
+## 🚀 Panduan Deployment ke Vercel
 
-Cukup buka file [`src/data/portfolio.ts`](file:///d:/ageng/web%20porto%20ageng/src/data/portfolio.ts) untuk mengedit:
-- `personal.name`, `nickname`, dan `bio`
-- `personal.email`, `whatsapp`, `github`, dan `linkedin`
-- Daftar keahlian pada `skills`
-- Daftar proyek pada `projects` (tambah/kurangi proyek, ganti gambar, deskripsi, link demo)
-- Riwayat kerja dan pendidikan pada `experiences`
-
----
-
-## 🚀 Panduan Deployment
-
-Website ini siap di-deploy langsung ke **Vercel** atau **Netlify**:
-1. Push kode ke repositori GitHub Anda:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: initial portfolio website"
-   git branch -M main
-   git remote add origin https://github.com/USERNAME/REPO_NAME.git
-   git push -u origin main
-   ```
-2. Import repositori Anda di [Vercel](https://vercel.com) atau [Netlify](https://netlify.com).
-3. Vercel secara otomatis mendeteksi konfigurasi Next.js tanpa perlu pengaturan tambahan!
+1. Push repository ke GitHub Anda.
+2. Di dashboard Vercel, tambahkan Environment Variable:
+   - Key: `ADMIN_PASSWORD`
+   - Value: `<password_rahasia_pilihan_anda>`
+3. Klik **Deploy**.

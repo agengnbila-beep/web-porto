@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { portfolioData } from "@/data/portfolio";
+import { usePortfolio } from "@/context/PortfolioContext";
 import {
   Mail,
   MessageCircle,
@@ -15,7 +15,7 @@ import {
 
 export const Contact: React.FC = () => {
   const { language, t } = useLanguage();
-  const { personal } = portfolioData;
+  const { personal } = usePortfolio();
 
   const [formData, setFormData] = useState({
     name: "",
