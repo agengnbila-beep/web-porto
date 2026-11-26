@@ -12,8 +12,8 @@ import { Footer } from "@/components/Footer";
 // Force dynamic rendering so edits in /admin immediately appear on refresh
 export const dynamic = "force-dynamic";
 
-export default function Home() {
-  const initialData = getPortfolioData();
+export default async function Home() {
+  const initialData = await getPortfolioData();
 
   return (
     <PortfolioDataProvider initialData={initialData}>

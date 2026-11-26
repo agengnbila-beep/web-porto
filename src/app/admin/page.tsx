@@ -21,6 +21,7 @@ import {
   FolderGit2,
   Settings,
   Download,
+  Database,
   X,
   Sparkles,
 } from "lucide-react";
@@ -34,6 +35,8 @@ export default function AdminPage() {
 
   // Data states
   const [data, setData] = useState<PortfolioData | null>(null);
+  const [dbStatus, setDbStatus] = useState<string>("Memeriksa database...");
+  const [isSupabase, setIsSupabase] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<"profile" | "projects" | "skills" | "experience" | "settings">("profile");
   const [isSaving, setIsSaving] = useState(false);
   const [toastMessage, setToastMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
@@ -75,6 +78,14 @@ export default function AdminPage() {
       .then((res) => res.json())
       .then((res) => setData(res))
       .catch(() => showToast("Gagal mengambil data portofolio", "error"));
+
+    fetch("/api/status")
+      .then((res) => res.json())
+      .then((res) => {
+        setDbStatus(res.database);
+        setIsSupabase(res.isSupabase);
+      })
+      .catch(() => {});
   };
 
   const handleLogin = async (e: React.FormEvent) => {
@@ -918,6 +929,29 @@ export default function AdminPage() {
               <div>
                 <h2 className="text-lg font-bold text-white">Backup & Pengaturan Sistem</h2>
                 <p className="text-xs text-slate-400">Cadangan data JSON dan petunjuk konfigurasi keamanan.</p>
+              </div>
+
+              <div className="p-4 rounded-xl border border-slate-800 bg-slate-850 space-y-3">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-sm font-bold text-white flex items-center gap-2">
+                    <Database className="w-4 h-4 text-cyan-400" />
+                    <span>Status Koneksi Database</span>
+                  </h3>
+                  <span
+                    className={`px-2.5 py-1 rounded-full text-[11px] font-mono font-semibold border ${
+                      isSupabase
+                        ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/30"
+                        : "bg-amber-500/10 text-amber-400 border-amber-500/30"
+                    }`}
+                  >
+                    ● {dbStatus}
+                  </span>
+                </div>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  {isSupabase
+                    ? "Website terhubung langsung ke Cloud Database Supabase (PostgreSQL). Setiap perubahan langsung tersimpan aman di cloud."
+                    : "Saat ini data disimpan di file lokal (portfolio.json). Untuk menghubungkan ke Supabase gratis, tambahkan NEXT_PUBLIC_SUPABASE_URL dan SUPABASE_SERVICE_ROLE_KEY di file .env.local atau di Vercel."}
+                </p>
               </div>
 
               <div className="p-4 rounded-xl border border-slate-800 bg-slate-850 space-y-3">

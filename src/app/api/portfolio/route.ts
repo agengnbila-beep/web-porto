@@ -14,7 +14,7 @@ function isAuthorized(token: string | undefined): boolean {
 
 export async function GET() {
   try {
-    const data = getPortfolioData();
+    const data = await getPortfolioData();
     return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json(
@@ -45,7 +45,7 @@ export async function PUT(req: NextRequest) {
       );
     }
 
-    const success = savePortfolioData(updatedData);
+    const success = await savePortfolioData(updatedData);
 
     if (!success) {
       return NextResponse.json(

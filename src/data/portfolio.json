@@ -1,6 +1,6 @@
 {
   "personal": {
-    "name": "Ageng Prasetyo",
+    "name": "Ageng Mulyandari Nabila",
     "nickname": "Ageng",
     "role": {
       "id": "Full Stack Web Developer & Software Engineer",
@@ -59,13 +59,34 @@
         "en": "Frontend Development"
       },
       "skills": [
-        { "name": "React.js", "level": "Advanced" },
-        { "name": "Next.js (App Router)", "level": "Advanced" },
-        { "name": "TypeScript", "level": "Advanced" },
-        { "name": "Tailwind CSS", "level": "Expert" },
-        { "name": "HTML5 / CSS3", "level": "Expert" },
-        { "name": "Redux Toolkit / Zustand", "level": "Intermediate" },
-        { "name": "Framer Motion", "level": "Intermediate" }
+        {
+          "name": "React.js",
+          "level": "Advanced"
+        },
+        {
+          "name": "Next.js (App Router)",
+          "level": "Advanced"
+        },
+        {
+          "name": "TypeScript",
+          "level": "Advanced"
+        },
+        {
+          "name": "Tailwind CSS",
+          "level": "Expert"
+        },
+        {
+          "name": "HTML5 / CSS3",
+          "level": "Expert"
+        },
+        {
+          "name": "Redux Toolkit / Zustand",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Framer Motion",
+          "level": "Intermediate"
+        }
       ]
     },
     {
@@ -74,12 +95,30 @@
         "en": "Backend & Database"
       },
       "skills": [
-        { "name": "Node.js & Express", "level": "Advanced" },
-        { "name": "PostgreSQL & Prisma ORM", "level": "Advanced" },
-        { "name": "RESTful APIs & GraphQL", "level": "Advanced" },
-        { "name": "MongoDB", "level": "Intermediate" },
-        { "name": "Redis", "level": "Intermediate" },
-        { "name": "Supabase / Firebase", "level": "Advanced" }
+        {
+          "name": "Node.js & Express",
+          "level": "Advanced"
+        },
+        {
+          "name": "PostgreSQL & Prisma ORM",
+          "level": "Advanced"
+        },
+        {
+          "name": "RESTful APIs & GraphQL",
+          "level": "Advanced"
+        },
+        {
+          "name": "MongoDB",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Redis",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Supabase / Firebase",
+          "level": "Advanced"
+        }
       ]
     },
     {
@@ -88,12 +127,30 @@
         "en": "Tools & DevOps"
       },
       "skills": [
-        { "name": "Git & GitHub", "level": "Advanced" },
-        { "name": "Docker", "level": "Intermediate" },
-        { "name": "Vercel / Netlify", "level": "Advanced" },
-        { "name": "Linux / Bash", "level": "Intermediate" },
-        { "name": "Postman", "level": "Advanced" },
-        { "name": "Figma (UI/UX Handoff)", "level": "Intermediate" }
+        {
+          "name": "Git & GitHub",
+          "level": "Advanced"
+        },
+        {
+          "name": "Docker",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Vercel / Netlify",
+          "level": "Advanced"
+        },
+        {
+          "name": "Linux / Bash",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Postman",
+          "level": "Advanced"
+        },
+        {
+          "name": "Figma (UI/UX Handoff)",
+          "level": "Intermediate"
+        }
       ]
     }
   ],
@@ -127,7 +184,14 @@
           "Team management system with role-based access control (RBAC)"
         ]
       },
-      "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL", "NextAuth.js"],
+      "techStack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Prisma",
+        "PostgreSQL",
+        "NextAuth.js"
+      ],
       "liveUrl": "https://example.com/demo/apexpulse",
       "githubUrl": "https://github.com/ageng-dev/apexpulse-analytics"
     },
@@ -160,7 +224,14 @@
           "High SEO score with dynamic metadata and automatic OpenGraph images"
         ]
       },
-      "techStack": ["React", "Next.js", "Tailwind CSS", "Zustand", "Node.js", "Midtrans API"],
+      "techStack": [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Zustand",
+        "Node.js",
+        "Midtrans API"
+      ],
       "liveUrl": "https://example.com/demo/karsastore",
       "githubUrl": "https://github.com/ageng-dev/karsastore-ecommerce"
     },
@@ -193,7 +264,13 @@
           "Scroll-spy interactive Table of Contents for quick navigation"
         ]
       },
-      "techStack": ["Next.js", "MDX", "Tailwind CSS", "TypeScript", "Algolia / Flexsearch"],
+      "techStack": [
+        "Next.js",
+        "MDX",
+        "Tailwind CSS",
+        "TypeScript",
+        "Algolia / Flexsearch"
+      ],
       "liveUrl": "https://example.com/demo/docuverse",
       "githubUrl": "https://github.com/ageng-dev/docuverse"
     },
@@ -224,7 +301,13 @@
           "Instant task filtering based on progress state and assignee"
         ]
       },
-      "techStack": ["React", "TypeScript", "Tailwind CSS", "Express.js", "MongoDB"],
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Express.js",
+        "MongoDB"
+      ],
       "liveUrl": "https://example.com/demo/flowtask",
       "githubUrl": "https://github.com/ageng-dev/flowtask"
     }
@@ -254,7 +337,14 @@
           "Collaborated closely with product designers and managers in agile bi-weekly sprint cycles."
         ]
       },
-      "technologies": ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Docker", "Tailwind CSS"],
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "Docker",
+        "Tailwind CSS"
+      ],
       "type": "work"
     },
     {
@@ -281,7 +371,13 @@
           "Implemented unit testing and automated GitHub Actions CI/CD workflows."
         ]
       },
-      "technologies": ["React", "JavaScript", "Tailwind CSS", "Redux", "REST APIs"],
+      "technologies": [
+        "React",
+        "JavaScript",
+        "Tailwind CSS",
+        "Redux",
+        "REST APIs"
+      ],
       "type": "work"
     },
     {
@@ -308,7 +404,12 @@
           "Active leader in Computer Science Student Coding Club and laboratory teaching assistant."
         ]
       },
-      "technologies": ["Algorithms", "Data Structures", "Database Systems", "Software Engineering"],
+      "technologies": [
+        "Algorithms",
+        "Data Structures",
+        "Database Systems",
+        "Software Engineering"
+      ],
       "type": "education"
     }
   ]

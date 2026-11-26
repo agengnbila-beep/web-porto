@@ -1,57 +1,71 @@
-# Website Portofolio Ageng (.dev) + Admin CMS Panel 🚀
+# Website Portofolio Ageng (.dev) + Admin CMS + Supabase 🚀
 
-Website portofolio modern, interaktif, responsif, dan berkinerja tinggi yang dilengkapi dengan **Website Admin CMS terintegrasi** di `/admin` untuk mengubah data diri, proyek, keahlian, dan riwayat pekerjaan secara langsung dari web browser tanpa menyentuh kode.
+Website portofolio modern, interaktif, responsif, dan berkinerja tinggi yang dilengkapi dengan **Website Admin CMS terintegrasi** di `/admin` dan **dukungan Cloud Database Supabase (PostgreSQL)**.
 
-Dibangun menggunakan **Next.js (App Router)**, **React**, **Tailwind CSS**, dan **Lucide Icons**.
+Dibangun menggunakan **Next.js (App Router)**, **React**, **Tailwind CSS**, **Supabase**, dan **Lucide Icons**.
+
+---
+
+## ⚡ Arsitektur Hybrid Database (Local File & Supabase)
+
+Sistem database dirancang secara cerdas:
+- **Default (Localhost)**: Jika Supabase belum dikonfigurasi, data otomatis disimpan di file lokal `src/data/portfolio.json`. Aplikasi tetap berjalan 100% lancar tanpa error.
+- **Supabase Mode (Cloud Database)**: Begitu Anda memasukkan URL & Key Supabase, sistem otomatis beralih ke cloud database PostgreSQL Supabase. Perubahan data di `/admin` langsung tersimpan abadi di cloud.
+
+---
+
+## 🗄️ Panduan Menghubungkan ke Supabase (Gratis - 2 Menit)
+
+1. **Buat Project di Supabase**:
+   - Buka [database.new](https://database.new) (atau [supabase.com](https://supabase.com)) dan buat project baru (gratis).
+2. **Jalankan SQL Schema**:
+   - Di dashboard Supabase, buka menu **SQL Editor** di sidebar kiri.
+   - Buka file [`supabase/schema.sql`](file:///d:/ageng/web%20porto%20ageng/supabase/schema.sql), salin kodenya, lalu paste di SQL Editor Supabase dan klik **Run**.
+3. **Ambil API Keys**:
+   - Masuk ke menu **Project Settings** > **API**.
+   - Salin `Project URL`, `anon public key`, dan `service_role secret key`.
+4. **Masukkan ke File `.env.local`** (atau Environment Variables di Vercel):
+   ```env
+   ADMIN_PASSWORD=admin123
+   NEXT_PUBLIC_SUPABASE_URL=https://xxxxxxxxxxxx.supabase.co
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOi...
+   SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOi...
+   ```
+5. **Selesai!** Saat Anda membuka halaman `/admin`, status database akan berubah menjadi `● Supabase (Cloud PostgreSQL)` dan data awal portofolio akan otomatis ter-seed ke Supabase.
 
 ---
 
 ## 🔐 Website Admin Dashboard (`/admin`)
 
-Untuk mengelola dan mengedit portofolio Anda secara visual:
-1. Buka URL: **`http://localhost:3000/admin`**
-2. Masukkan password admin default: **`admin123`**
-3. Fitur di dalam Dashboard Admin:
-   - 👤 **Profil & Bio**: Ubah nama lengkap, nama panggilan, bio (Bahasa Indonesia & English), kontak email, WhatsApp, lokasi, link GitHub, LinkedIn, URL foto profil, dan statistik.
-   - 🚀 **Manajemen Proyek (CRUD)**: Tambah proyek baru, edit proyek yang ada, upload link gambar mockup, atur tag teknologi, link demo & repository, serta status *Featured Project*.
-   - ⚡ **Keahlian (Skills & Tech Stack)**: Tambah/hapus skill per kategori (Frontend, Backend, DevOps) beserta level keahlian.
-   - 🎓 **Pengalaman & Pendidikan**: Kelola riwayat karir dan pendidikan.
-   - 💾 **Backup JSON**: Unduh file cadangan (*snapshot*) seluruh konfigurasi data portofolio kapan saja dalam satu klik.
-4. Klik tombol **"Simpan Semua"** di pojok kanan atas, dan perubahan akan langsung tampil secara instan di halaman utama website!
-
-> 💡 **Cara Mengubah Password Admin**:  
-> Cukup ubah nilai `ADMIN_PASSWORD` di file `.env.local` pada komputer Anda (atau di menu *Environment Variables* Vercel jika sudah di-hosting).
-
----
-
-## ✨ Fitur Halaman Portofolio Publik
-
-- 🌐 **Bilingual (ID ⇄ EN)**: Dilengkapi tombol peralihan bahasa instan (Bahasa Indonesia & Bahasa Inggris).
-- 🌓 **Dark & Light Mode**: Desain tema *Modern Dark Slate* dengan aksen neon (Cyan/Indigo) serta mode terang (*Clean Light*).
-- ⚡ **Single-Page Navigation**: Navigasi mulus (*smooth scrolling*) ke setiap bagian halaman dengan status navbar *blur backdrop*.
-- 🔍 **Project Detail Modal**: Setiap proyek dapat dibuka dalam popup detail untuk menampilkan studi kasus, arsitektur, daftar fitur unggulan, dan link demo/GitHub.
-- 💼 **Timeline Karir & Pendidikan**: Filter interaktif antara pengalaman kerja profesional dan riwayat pendidikan.
-- 🛠️ **Tech Stack Badges**: Showcase keahlian berdasarkan kategori (*Frontend*, *Backend & Database*, serta *Tools & DevOps*).
-- ✉️ **Formulir Kontak Interaktif**: Dilengkapi validasi formulir, notifikasi feedback toast, tombol salin email, dan tautan langsung ke WhatsApp.
+- **URL Admin**: [http://localhost:3000/admin](http://localhost:3000/admin) *(atau klik ikon gembok di footer)*
+- **Default Password**: `admin123`
+- **Fitur Dashboard**:
+  - 👤 **Profil & Bio**: Ubah nama, panggilan, bio bilingual (ID & EN), kontak email, WhatsApp, sosmed, avatar, dan statistik.
+  - 🚀 **Manajemen Proyek (CRUD)**: Tambah, edit, dan hapus proyek portofolio, upload link thumbnail, set tag tech stack, dan toggle status *Featured*.
+  - ⚡ **Keahlian (Skills)**: Kelola skill per kategori (*Frontend*, *Backend*, *Tools*) beserta level keahlian.
+  - 🎓 **Pengalaman & Pendidikan**: Kelola timeline pekerjaan dan studi.
+  - 💾 **Backup JSON**: Unduh file cadangan data portofolio kapan saja.
 
 ---
 
 ## 🛠️ Menjalankan di Komputer Lokal
 
-1. **Jalankan development server**:
-   ```bash
-   npm run dev
-   ```
-2. **Buka di peramban**:
-   - Halaman Utama: [http://localhost:3000](http://localhost:3000)
-   - Panel Admin: [http://localhost:3000/admin](http://localhost:3000/admin)
+```bash
+npm run dev
+```
+Buka peramban di:
+- Halaman Publik: [http://localhost:3000](http://localhost:3000)
+- Panel Admin: [http://localhost:3000/admin](http://localhost:3000/admin)
 
 ---
 
 ## 🚀 Panduan Deployment ke Vercel
 
-1. Push repository ke GitHub Anda.
-2. Di dashboard Vercel, tambahkan Environment Variable:
-   - Key: `ADMIN_PASSWORD`
-   - Value: `<password_rahasia_pilihan_anda>`
-3. Klik **Deploy**.
+1. Push repository ini ke GitHub Anda.
+2. Di dashboard Vercel, import repository **`web-porto`**.
+3. Tambahkan Environment Variables:
+   - `ADMIN_PASSWORD` = `<password_admin_anda>`
+   - `NEXT_PUBLIC_SUPABASE_URL` = `<url_supabase_anda>`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY` = `<anon_key_anda>`
+   - `SUPABASE_SERVICE_ROLE_KEY` = `<service_role_key_anda>`
+4. Klik **Deploy**!
